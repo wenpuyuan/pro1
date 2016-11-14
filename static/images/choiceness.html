@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://localhost:8090/test/choiceness.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link rel="stylesheet" type="text/css" href="./choiceness_files/global.css">
+	<link rel="stylesheet" type="text/css" href="./choiceness_files/home.css">
+</head>
+<body>
+
+<!-- 精选 -->
+		<div class="choiceness clear">
+			<div class="choiceness-title">
+				<img src="./choiceness_files/today_DDp.png" alt="">
+			</div>
+			##for(var i = 0; i &lt; a.length; i++ ){##
+				<div class="choiceness-main">
+					<img class="bg" src="./choiceness_files/{{a[i].img1}}" alt="">
+					<div class="fixindicate">
+						<img src="./choiceness_files/{{a[i].img2}}" alt="">
+						<p class="p1 fwb">{{a[i].p1}}</p>
+						<p class="p2">{{a[i].p2}}</p>
+					</div>
+				</div>
+			##}##
+		</div>
+
+
+
+
+<script src="./choiceness_files/jquery.js"></script>
+<script src="./choiceness_files/sea.js"></script>
+<script src="./choiceness_files/underscore.js"></script>
+<script>
+	seajs.config({
+		base: './'
+	});
+	seajs.use(['js/choiceness.js'],function(a){
+		a.choiceness();
+	});
+</script></body></html>
